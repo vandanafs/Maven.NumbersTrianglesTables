@@ -25,7 +25,7 @@ public class NumberUtilitiesTest {
 
         // : When
         String actual = NumberUtilities.getRange(stop);
-
+        System.out.println(actual+" actual output");
         // : Then
         Assert.assertEquals(expected, actual);
     }
@@ -38,7 +38,7 @@ public class NumberUtilitiesTest {
 
         // : When
         String actual = NumberUtilities.getRange(stop);
-
+        System.out.println(actual+" actual output");
         // : Then
         Assert.assertEquals(expected, actual);
     }
