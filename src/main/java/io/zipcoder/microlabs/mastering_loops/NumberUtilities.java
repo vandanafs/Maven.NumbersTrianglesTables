@@ -7,8 +7,11 @@ public class NumberUtilities {
         for(int i=start; i<stop; i++){
 
             if(i%2==0){
-                System.out.println(String.valueOf(i));
-               even+=String.valueOf(i);
+                even+=i;
+               // System.out.println(String.valueOf(i));
+               //even+=String.valueOf(i);
+
+
             }
         }
 
@@ -33,7 +36,7 @@ public class NumberUtilities {
     public static String getSquareNumbers(int start, int stop, int step) {
 
 
-        return null;
+        return getExponentiations(start,stop,step,2);
     }
 
     public static String getRange(int start) {
@@ -46,13 +49,14 @@ public class NumberUtilities {
     }
 
     public static String getRange(int start, int stop) {
-        String range="";
-        for(int i=start; i<stop;i++){
-            String str=String.valueOf(i);
-            range+=str;
-
-        }
-        return range;
+             return getRange(start,stop,1);
+//        String range="";
+//        for(int i=start; i<stop;i++){
+//            // String str=String.valueOf(i);
+//            range+=i;
+//
+//        }
+//        return range;
     }
 
 
@@ -67,6 +71,14 @@ public class NumberUtilities {
 
 
     public static String getExponentiations(int start, int stop, int step, int exponent) {
-        return null;
+                 String result="";
+
+                 for( int i=start;i<stop; i+=step){
+
+                     result=result+Math.round(Math.pow(i,exponent));
+                  //   System.out.println(result);
+        }
+                 return result;
+
     }
 }
