@@ -2,50 +2,54 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class TableUtilities {
     public static String getSmallMultiplicationTable(int n, int cols) {
-        //n--> number rows
-        int result = 0;
-        for (int i = 1; i <= n; i++) {  //row n
-            for (int j = 1; j <= cols; i++) {  //cols
-                result = i * j;
 
 
+
+        //2nd way
+
+        String temp="";
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= cols; j++) {
+                temp+=String.format("%3d |", i * j);
             }
-            System.out.println();
+             temp+="\n";
         }
-        return null;
-    }
+        return temp;
 
-      //String pattern="";
-//      int i=1;
-//  while(i<=cols){
-//     pattern= printRow(i);
-//      i+=1;
-//  }
-//  return pattern;
-//    }
+   }
 
-    public static String getLargeMultiplicationTable() {
-         return null;
-    }
 
-    public static String getMultiplicationTable(int tableSize) {
-        return null;
-    }
+
+
+        public static String getLargeMultiplicationTable () {
+            return getMultiplicationTable(10);
+        }
+
+        public static String getMultiplicationTable ( int tableSize){
+              String temp="";
+            for (int i = 1; i <= tableSize; i++) {
+                for (int j = 1; j <= tableSize; j++) {
+                    temp +=String.format("%3d |", i * j);
+                }
+                temp+="\n";
+            }
+            return temp;
+        }
+
+
 
     public static String printRow(int n){
         int i=1;
         String res="";
-        String temp="%4d |";
+
         while(i<=5){  //n col
-          //  res=System.out.format("%4d |",n*i);
-            //res= temp+n*i;
-                  System.out.printf("%4d |",n*i);
-           // System.out.printf(res);
-            i+=1;
+            res=String.format("%4d |",n*i);
+                  i+=1;
 
         }
-        System.out.println();
-        return String.format("%4d |",n*i);
+        res+="\n";
+     //   System.out.println();
+        return res;
     }
 
 }
