@@ -2,19 +2,19 @@ package io.zipcoder.microlabs.mastering_loops;
 
 public class TableUtilities {
     public static String getSmallMultiplicationTable(int n, int cols) {
-
+        return getMultiplicationTable(n);
 
 
         //2nd way
 
-        String temp="";
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= cols; j++) {
-                temp+=String.format("%3d |", i * j);
-            }
-             temp+="\n";
-        }
-        return temp;
+//        String temp="";
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= cols; j++) {
+//                temp+=String.format("%3d |", i * j);
+//            }
+//             temp+="\n";
+//        }
+//        return temp;
 
    }
 
